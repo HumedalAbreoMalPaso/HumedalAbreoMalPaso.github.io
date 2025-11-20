@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="index.css"/>
+</head>
+<body id="color-index">
+
+	<main>
+	<div class="landscape-container">
+			<div class="moon-glow"></div>
+
+			<div class="hill hill-back"></div>
+			
+			<div class="tree tree-1"></div>
+			<div class="tree tree-3"></div>
+
+			<div class="hill hill-front"></div>
+			<div class="tree tree-2"></div>
+			<div class="tree tree-4"></div>
+			
+			<div class="rock rock-1"></div>
+			<div class="rock rock-2"></div>
+
+			<div class="water">
+					<div class="reflection r-1"></div>
+					<div class="reflection r-2"></div>
+					<div class="reflection r-3"></div>
+			</div>
+	</div>
+	<section class="content history" id="intro">
+		<h1>Fue en el año 2010</h1>
+
+		<div class="text">
+			<p class="paragraph first-clamp">
+		Apenas un año después de mi llegada a Rionegro con mi
+	familia, escuché por primera vez la existencia de una “represa” muy cerca del
+	casco urbano. Fue durante una conversación familiar en la que uno de los
+	sobrinos de mi esposo mencionó que allí solía ir a pescar y que era un lugar
+	bonito y tranquilo. Aquella descripción despertó inmediatamente mi interés:
+	desde siempre los cuerpos de agua y las aves que los habitan han sido para mí
+	un llamado profundo. Pregunté cómo llegar y, guiada por esa intuición,
+	emprendí camino junto con mi esposo Gonzalo para conocer aquel sitio que
+	pronto se convertiría en uno de los ejes de mi vida profesional y personal.
+			</p>
+
+			<p class="paragraph">Al llegar, la impresión fue inmediata. La lámina de agua brillante, rodeada de
+	silencio y vegetación, nos recibió con dos especies que parecían custodiar el
+	lugar: el Piscingo (Dendrocygna autumnalis) y la Iguasa María (Dendrocygna
+	bicolor). Ese encuentro marcó una decisión irrevocable: este sería el cuerpo de
+	agua que monitorearía año tras año dentro de los Censos Neotropicales de
+	Aves Acuáticas (CNAA). Posteriormente propuse a la Sociedad Antioqueña de
+	Ornitología incluir el sitio como punto ofcial de monitoreo, y desde entonces,
+	durante 14 años, he registrado allí dos conteos anuales sin interrupción.
+			</p>
+
+			<p class="paragraph">
+	Con el paso del tiempo, y a través de los recorridos constantes, fui
+	comprendiendo la compleja realidad del humedal: su origen artifcial, su
+	importancia histórica como fuente de agua para la comunidad rionegrera, y
+	los diversos usos recreativos que la gente hacía de él—acampar, pescar, hacer
+	fogatas, nadar—actividades acompañadas de problemáticas visibles como
+	residuos sólidos, quemas y deterioro de la ronda hídrica. En medio de esos
+	contrastes, intuía que todos esos datos serían valiosos algún día para sustentar
+	la importancia del ecosistema y apoyar su defensa ante las entidades
+	ambientales y la misma comunidad.
+			</p>
+
+			<p class="paragraph">
+			El POMCA de la Subcuenca Abreo-Malpaso (2006) ya advertía desafíos
+	sustanciales: asentamientos sin conexión al alcantarillado descargando aguas
+	residuales directamente al humedal, manejo inadecuado de residuos sólidos,
+	uso de agroquímicos y procesos de deforestación. Hoy, casi dos décadas
+	después, estas presiones no solo persisten, sino que se han intensifcado. A ello
+	se suma la eutrofización del cuerpo de agua y la invasión total del espejo por
+	Myriophyllum aquaticum, Salvinia minima y Typha sp., lo que ha alterado
+	drásticamente la presencia habitual de aves y la estabilidad ecológica del
+	sistema.
+			</p>
+
+			<p class="paragraph">
+			Frente a este panorama, y utilizando los datos recopilados durante 14 años
+	para mi investigación de Maestría en Desarrollo Sostenible —en la cual
+	analizo la dinámica temporal del paisaje, la calidad del agua y sus efectos
+	sobre la comunidad de aves— se gestó la idea de crear esta Landing Page como
+	un instrumento confiable, accesible y sostenible en el tiempo. Un espacio para
+	congregar la información histórica, los hallazgos de mi estudio, otras
+	investigaciones realizadas en el humedal, galerías fotográficas de fauna, ?ora
+	y paisaje, normativa ambiental vigente, mapas, contactos y recursos
+	relevantes para el territorio.
+			</p>
+
+			<p class="paragraph">
+			Todo este esfuerzo busca fortalecer el conocimiento, democratizar la
+	información y promover una conciencia crítica y sensible sobre el valor del
+	humedal. Anhela mover voluntades: de instituciones, de la comunidad, de la
+	academia y del sector privado, para actuar oportunamente a favor de su
+	conservación. Y, en el escenario doloroso en que el riesgo de desaparición
+	supere la capacidad de resiliencia del ecosistema—vencido por intereses
+	económicos de pocos y la indiferencia de muchos—al menos quedará
+	testimonio de lo que fue. Quedará el rastro de un territorio que luchó por
+	seguir vivo, de un corazón de agua que quiso seguir latiendo para sostener
+	cientos de vidas, y del mensaje profundo que nos deja: que cuando un
+	humedal calla, no desaparece solo un paisaje, desaparece también la parte de
+	nosotros que olvidó mirar con el corazón y custodiar aquello que nos sostiene.
+			</p>
+		</div>
+		<button class="custom">Leer más</button>
+	</section>
+
+	</main>
+
+<script>
+
+	const section = document.getElementById("intro");
+
+	const button = section.querySelector("button");
+	const text = section.querySelector("div.text");
+
+	button.addEventListener("click", () => {
+		text.classList.toggle("collapsed");
+		if(text.classList.contains("collapsed")){
+			button.textContent = "Leer menos";
+		}
+		else{
+			button.textContent = "Leer más";
+		}
+
+	});
+	
+</script>
+
+
+</body>
+</html>
