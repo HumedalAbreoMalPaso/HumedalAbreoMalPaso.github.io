@@ -3,6 +3,13 @@
  * https://colors.artyclick.com/color-names-dictionary/color-names/deep-forest-green-color
  */
 
+/* Custom Font */
+@font-face {
+  font-family: 'NoticiaText';
+  src: url('/static/NoticiaText-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body,
 html {
@@ -26,7 +33,7 @@ html {
   --water-surface: rgba(46, 119, 103, 0.6);
   --sun-glow: rgba(255, 255, 255, 0.05);
 
-  /* Morning Palette */
+  /* Morning Palette - Outise main text */
   --bg-top: #0f2027;
   --bg-bottom: #2c5364;
   --accent-light: rgba(40, 200, 150, 0.3);
@@ -43,7 +50,7 @@ html {
 
 body {
   height: max-content;
-  /* background-color: var(--deep-forest); */
+  min-height: 100vh;
   background:
     /* Layer 1: The Glow (Top Center) */
     radial-gradient(circle at 50% 10%, var(--accent-light) 0%, transparent 60%),
@@ -52,7 +59,11 @@ body {
     /* Layer 3: The Base Gradient */
     linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
 
-  font-family: monospace;
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+
+  font-family: sans-serif;
   padding: 0 3%;
 }
 
@@ -61,11 +72,7 @@ main {
   overflow-x: clip;
 }
 
-
-
-
-
-/* --- Main Container --- */
+/* Landscape starts here */
 .landscape-container {
   position: absolute;
   border-radius: 5px;
@@ -75,7 +82,6 @@ main {
   height: 100%;
   background: linear-gradient(to bottom, var(--sky-top), var(--sky-bottom));
   z-index: -1;
-  /* Keeps it behind your content */
 }
 
 /* --- The Sun/Moon Glow --- */
@@ -230,35 +236,30 @@ main {
   animation-delay: 2s;
 }
 
-/* --- Animations --- */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateX(0);
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: translateX(10px);
-    opacity: 1;
-  }
-}
-
-/* Content Overlay (Example text) */
 .content {
   position: relative;
   z-index: 10;
   text-align: left;
-  color: white;
+  color: #fff;
 }
 
 h1 {
+  font-family: "NoticiaText";
   font-size: 4rem;
   font-weight: 300;
   letter-spacing: 5px;
   margin: 0;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+h2 {
+  font-family: "NoticiaText";
+  font-size: 3.06rem;
+  letter-spacing: 5px;
+  margin: auto;
+  text-align: center;
+  text-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -276,13 +277,14 @@ p {
 button.custom {
   margin-top: 20px;
   background: transparent;
-  border: 1px solid #2a6650;
+  border: 2px solid #2a6650;
+  border-radius: 30px;
   color: #a0ffc8;
+  cursor: pointer;
   padding: 10px 24px;
   font-size: 0.9rem;
+  font-weight: 500;
   letter-spacing: 2px;
-  cursor: pointer;
-  border-radius: 30px;
   transition: all 0.3s ease;
 }
 
@@ -324,7 +326,7 @@ section.history {
   }
 
   & div.text.collapsed {
-    max-height: 124rem
+    max-height: 134rem
   }
 }
 
@@ -372,4 +374,39 @@ section.history {
   padding: 5px 15px;
   border-radius: 4px;
   font-weight: bold;
+}
+
+/* --- Vintage Photo Gallery --- */
+.inner-figure {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  flex-wrap: row wrap;
+}
+
+.vintage-photo {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 220px;
+  height: auto;
+  padding: 15px;
+}
+
+.vintage-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.photo-left {
+  transform: translateY(0.4rem) rotate(-5deg);
+}
+
+.photo-right {
+  transform: rotate(3deg);
 }
